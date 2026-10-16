@@ -20,6 +20,9 @@
 
 	<properties>
 		<java.version>17</java.version>
+		<sonar.organization>aabguev-s</sonar.organization>
+    	<sonar.projectKey>aabguev-s_Corpomotriz_Los_Salias_QA</sonar.projectKey>
+    	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 	<dependencies>
