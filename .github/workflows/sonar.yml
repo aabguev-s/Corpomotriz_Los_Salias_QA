@@ -40,6 +40,11 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Comprobar frontend
+        run: |
+          ls
+          find . -name "*.ts" -not -path "*/node_modules/*" | head -20
+
       - name: Cache de Sonar
         uses: actions/cache@v4
         with:
@@ -51,3 +56,5 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: -Dsonar.verbose=true
