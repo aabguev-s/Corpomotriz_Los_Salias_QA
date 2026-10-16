@@ -38,7 +38,7 @@ jobs:
 
       - name: Instalar dependencias del frontend
         working-directory: frontend
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Comprobar frontend
         run: |
